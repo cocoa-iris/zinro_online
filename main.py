@@ -1,10 +1,10 @@
 #悪用厳禁。悪用したら殺します。
+#娯楽機能は全削除済み。
 
 
 
 
-
-#miabot 2.1
+#BerryBot 1.0
 
 
 import requests
@@ -17,10 +17,10 @@ import random
 
 maxlen = 100
 isrm = 0
-miase = input('session key')
+miase = input('session key:') #取得するコードを書いたら長くなり、可読性が下がるので割愛しました
 
-webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<--created by mia-->")
-admin = {'◆JK...c./lM':4,'◆Rena/uGvAQ':3,'◆Awa/JkNss.':3,'◆MCqocT7jMg':4,'◆TensichanY':3,'◆8mg/I1F0mY':3}
+webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=【BerryBot】")
+admin = {'◆TensichanY':4} #権限リスト。ご自由に変更してください。権限レベルは3(権限持ち)、4(管理者レベル)があります。出禁を1、その他一般を2としています。
 dekin = ['◆WBRXcNtpf.']
 
 for yuik in range(1,50000,1):
@@ -90,72 +90,10 @@ for yuik in range(1,50000,1):
         webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<bot> 停止コマンドを発見、botを停止します!")
         break
     if '#maxlen' in mia['message']:
-       if mia['color'] == 'white' or val['trip'] == '◆JK...c./lM' or val['trip'] == '◆MCqocT7jMg' or val['trip'] == '◆GhgCSOgF7Y':
+       if mia['color'] == 'white':
          mx = str(mia['message'])
          maxlen = int(mx[8:])
          webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<bot> 文字数制限を"+str(maxlen)+'文字に変更しました')
-
-    if mia['message'] == "#gacha":
-      
-      import random
-      count = 0
-      miku = []
-
-      while count < 10:
-        mii = random.randrange(0,100000)
-        if mii < 1:
-          miku.append("ネオン")
-        elif mii < 40:
-          miku.append("二酸化炭素")
-        elif mii < 1000:
-          miku.append("アルゴン")
-        elif mii < 21000:
-          miku.append("O2")
-        else:
-          miku.append("N2")
-
-        count = count + 1
-      gac =str(miku)[1:-1]
-      gat = gac.replace("'","")
-      gaga = "【"+gat+"】"
-      webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<bot>"+gaga)
-
-    if '#soin' in mia['message']:
-      soso = mia['message']
-      bun = soso[6:]
-      
-      def isint(s):
-         try:
-            int(s,10)
-         except ValueError:
-            return False
-         else:
-            return True
-      if isint(bun) == True:
-        mi = int(bun)
-
-        if mi >= 2:
-
-          soin = []
-          while mi % 2 ==0:
-            mi = mi // 2
-            soin.append(2)
-
-          f = 3
-          while f ** 2 <= mi:
-           if mi % f ==0:
-             mi = mi // f
-             soin.append(f)
-           else:
-             f = f + 2
-
-          if mi != 1:
-            soin.append(mi)
-          sopr = str(soin)
-          sopt = sopr[1:-1]
-          webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<bot>素因数分解："+bun+" = "+sopt)
-      else:
-        webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<bot> 数字を入れてね！？")
 
     if mia['message'] == '#info':
       if val['trip'] not in admin:
