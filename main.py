@@ -61,7 +61,7 @@ for yuik in range(1,50000,1):
          webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=<bot> "+yuri +"さん("+ vall['trip']+")よろしくー")
   
   if isrm == 0:     
-    if "死ね" in berry_2['message'] or "カス" in berry_2['message'] or "bit.ly" in berry_2['message'] or len(berry_2['message']) >= 100:
+    if "死ね" in berry_2['message'] or "カス" in berry_2['message'] or "bit.ly" in berry_2['message'] or len(berry_2['message']) >= maxlen:
       if berry_2['color'] != 'white' and berry_2['color'] != 'skyblue':
         if val['trip'] not in admin: 
           gb = val['id']
