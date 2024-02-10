@@ -1,5 +1,4 @@
 #悪用厳禁。悪用したら殺します。
-#娯楽機能は全削除済み。
 
 
 #BerryBot 1.0
@@ -8,17 +7,15 @@
 import requests
 import webbrowser
 import json
-import re
 import time
 import ast
-import random
 
 maxlen = 100
 isrm = 0
 sessions = input('session key:') #取得するコードを書いたら長くなり、可読性が下がるので割愛しました
 
 webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=【BerryBot】")
-admin = {'◆TensichanY':4} #権限リスト。ご自由に変更してください。権限レベルは3(権限持ち)、4(管理者レベル)があります。出禁を1、その他一般を2としています。
+admin = {'◆TensichanY':4,'◆PG/.......':'3'}#権限リスト。ご自由に変更してください。権限レベルは3(権限持ち)、4(管理者レベル)があります。出禁を1、その他一般を2としています。
 dekin = ['◆WBRXcNtpf.']
 
 for yuik in range(1,50000,1):
