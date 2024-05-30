@@ -1,4 +1,4 @@
-#悪用厳禁。悪用したら殺します。
+
 
 
 #BerryBot 1.0
@@ -12,10 +12,10 @@ import ast
 
 maxlen = 100
 isrm = 0
-sessions = input('session key:') #取得するコードを書いたら長くなり、可読性が下がるので割愛しました
+sessions = input('session key:') 
 
 webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=【BerryBot】")
-admin = {'◆TensichanY':4,'◆PG/.......':'3'}#権限リスト。ご自由に変更してください。権限レベルは3(権限持ち)、4(管理者レベル)があります。出禁を1、その他一般を2としています。
+admin = {'◆TensichanY':4,'◆PG/.......':'3'}
 dekin = ['◆WBRXcNtpf.']
 
 for yuik in range(1,50000,1):
